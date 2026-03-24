@@ -24,33 +24,29 @@
 }
 
 main {
-  padding: 1rem 3rem;
-}
-
-.container {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 3em;
+  border: 2px solid lightcoral;
+  padding: 2rem;
 }
 
 .hero {
   text-align: center;
-  max-width: 550px;
+  width: min(35em, 90%);
   margin: 3rem auto;
 }
 
 .hero__subtitle {
-  font-size: 2rem;
   color: var(--color-grey-400);
+  font-size: clamp(1.5rem, 3vw, 3rem);
 }
 
 .hero__title {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 3vw, 3rem);
   color: var(--color-grey-500);
 }
 
 .hero__description {
-  margin-top: 1rem;
+  font-size: clamp(1rem, 2.5vw, 2.5rem);
+  margin-block-start: 1.5rem;
   color: var(--color-grey-400);
 }
 
@@ -65,7 +61,7 @@ main {
 }
 
 .card {
-  padding: 1rem;
+  padding: min(5vw, 1.5rem);
   border-radius: 8px;
   box-shadow: 0px 5px 5px 5px
     color-mix(
