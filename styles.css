@@ -58,8 +58,9 @@ main {
 .card__container {
   list-style-type: none;
   display: grid;
+  grid-auto-rows: 1fr;
 
-  gap: 1rem;
+  gap: 1.875rem;
 
   max-width: 62.5em;
   margin: 3rem auto;
@@ -98,7 +99,7 @@ main {
 
 .card__image {
   margin-block-start: 3rem;
-  width: clamp(3.5em, 25%, 80px);
+  width: clamp(3.5em, 25%, 5em);
   margin-left: auto;
 }
 
@@ -112,25 +113,29 @@ main {
 @media (min-width: 56.25em) {
   .card__container {
     grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      '.           team-builder      .'
+      'supervisor team-builder karma'
+      'supervisor calculator   karma'
+      '.           calculator        .';
     max-width: 1200px;
     gap: 2rem;
+    align-items: center;
   }
 
   .card__item--supervisor {
-    grid-row: 2 / 4;
+    grid-area: supervisor;
   }
 
   .card__item--team-builder {
-    grid-row: 1 / 3;
+    grid-area: team-builder;
   }
 
   .card__item--karma {
-    grid-column-start: 2;
-    grid-row: 3 / 5;
+    grid-area: karma;
   }
 
   .card__item--calculator {
-    grid-column-start: 3;
-    grid-row: 2 / 4;
+    grid-area: calculator;
   }
 }
