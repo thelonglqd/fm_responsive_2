@@ -24,7 +24,6 @@
 }
 
 main {
-  border: 2px solid lightcoral;
   padding: 2rem;
 }
 
@@ -36,7 +35,7 @@ main {
 
 .hero__subtitle {
   color: var(--color-grey-400);
-  font-size: clamp(1.5rem, 3vw, 3rem);
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
 }
 
 .hero__title {
@@ -97,7 +96,7 @@ main {
 
 .card__image {
   margin-top: 3rem;
-  width: 25%;
+  width: clamp(60px, 25%, 120px);
   margin-left: auto;
 }
 
@@ -106,9 +105,6 @@ main {
 }
 
 @media (min-width: 56.25em) {
-  .container {
-    max-width: 650px;
-  }
   .card__container {
     grid-template: repeat(5, 1fr) / repeat(3, 1fr);
     max-width: 1200px;
